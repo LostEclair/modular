@@ -1,0 +1,14 @@
+#+TITLE: modular.el
+
+modular.el is something like =doom!= block in doom emacs, but not quite that.
+
+* How to use it
+#+BEGIN_SRC elisp
+  (require 'modular)
+
+  (modular-define-feature ansible)
+  (modular-set-feature ansible :off)
+
+  ;; this feature is now off, meaning
+  (modular-require ansible) ;=> nil
+#+END_SRC
